@@ -1,0 +1,9 @@
+LIBRARY dinput8
+EXPORTS
+    DirectInput8Create=DK_DirectInput8Create @1
+    DllCanUnloadNow=DK_DllCanUnloadNow PRIVATE
+    DllGetClassObject=DK_DllGetClassObject PRIVATE
+    DllRegisterServer=DK_DllRegisterServer PRIVATE
+    DllUnregisterServer=DK_DllUnregisterServer PRIVATE
+    GetdfDIJoystick=DK_GetdfDIJoystick @6
+    DK_GetLoaderApi PRIVATE
