@@ -97,8 +97,8 @@ Install
 -------
 Copy everything into the game folder (where SWTFU.exe is), e.g.
   ...\Steam\steamapps\common\Star Wars The Force Unleashed\
-Files: dinput8.dll (DK_Loader, shared by all DK mods - keep the newest), DK_Blaster.dll, DK_ModOptions\DK_Blaster.ini,
-DK_Blaster_Uninstall.bat. Nothing else is needed. Optional: Mod Options Menu for the in-game settings page:
+Files: dinput8.dll (DK_Loader, shared by all DK mods - keep the newest), DK_Blaster.dll, DK_ModOptions\DK_Blaster.ini.
+Nothing else is needed. Optional: Mod Options Menu for the in-game settings page:
 https://www.nexusmods.com/starwarstheforceunleashed/mods/38 (any DK mod's loader runs this mod).
 Steam "Verify integrity of game files" deletes dinput8.dll: copy it back afterwards.
 Source code and build steps: https://github.com/DRIFTKILLER05/swtfu-blaster-combat
@@ -182,9 +182,10 @@ Compatibility
 
 Uninstall
 ---------
-Run DK_Blaster_Uninstall.bat in the game folder (or delete by hand: DK_Blaster.dll, DK_Blaster.ini,
-DK_Blaster_Classes.ini, DK_Blaster*.log, DK_Blaster_README.txt, DK_ModOptions\DK_Blaster.ini, LevelPacks\dk_blaster*.*,
-LevelPacks\dk_hothrebel*.lp, LevelPacks\dk_tat*.lp). Keep dinput8.dll if other DK mods are installed.
+Close the game, then delete DK_Blaster.dll from the game folder: that alone turns the mod off. To remove everything it
+made too, also delete DK_Blaster.ini, DK_Blaster_Classes.ini, DK_Blaster*.log, DK_Blaster_README.txt,
+DK_ModOptions\DK_Blaster.ini, LevelPacks\dk_blaster*.*, LevelPacks\dk_hothrebel*.lp and LevelPacks\dk_tat*.lp.
+Keep dinput8.dll if other DK mods are installed. Your saves are not touched.
 
 Troubleshooting
 ---------------
@@ -202,6 +203,8 @@ Version history
 1.2.3: Fixed: with the oldest DK loader (from DK 60 FPS Fix 1.0.2 or DK Lighting Fix 1.0.0) blaster mode would not
        switch on - it went straight back to the saber (it called a loader function that loader does not have).
        Changed: DK_Blaster.log names the loader's API version on its first line.
+       Removed: DK_Blaster_Uninstall.bat from the download (virus scanners flag batch files); the README's Uninstall
+       section lists the files to delete.
 1.2.2: Fixed: radio dialogue (Juno, Kota or PROXY talking over the comms while you keep playing) switched blaster
        mode off and holstered the gun. It now only steps aside for real cutscenes; through radio talk you keep
        shooting, in the same outfit.
